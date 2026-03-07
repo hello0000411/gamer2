@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Unblocked Games</title>
+    <style>
+        body { font-family: sans-serif; background: #1a1a1a; color: white; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 20px; padding: 20px; }
+        .game-card { background: #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+        .game-card:hover { background: #555; transform: scale(1.05); }
+        iframe { width: 90%; height: 80vh; border: none; display: none; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>🎮 75+ Unblocked Games</h1>
+    <div id="game-container">
+        <button onclick="home()">Back to Menu</button>
+        <iframe id="game-frame" src=""></iframe>
+    </div>
+    
+    <div class="grid" id="menu">
+        <div class="game-card" onclick="play('https://slopegame.io')">Slope</div>
+        <div class="game-card" onclick="play('https://getawayshootout.io')">Getaway Shootout</div>
+        <div class="game-card" onclick="play('https://asmallworldcup.com')">A Small World Cup</div>
+        <div class="game-card" onclick="play('https://basketrandom.io')">Basket Random</div>
+        <div class="game-card" onclick="play('https://idleminingempire.com')">Idle Mining Empire</div>
+        <div class="game-card" onclick="play('https://idle-breakout.com')">Idle Breakout</div>
+        <div class="game-card" onclick="play('https://cookieclicker.com')">Cookie Clicker</div>
+        <div class="game-card" onclick="play('https://ducklife.online')">Duck Life</div>
+        <div class="game-card" onclick="play('https://escaperoad.io')">Escape Road</div>
+        <div class="game-card" onclick="play('https://escaperoad2.io')">Escape Road 2</div>
+        <div class="game-card" onclick="play('https://drivemad.com')">Drive Mad</div>
+        <div class="game-card" onclick="play('https://survival-race.io')">Survival Race</div>
+        </div>
+
+    <script>
+        function play(url) {
+            document.getElementById('menu').style.display = 'none';
+            document.getElementById('game-frame').style.display = 'inline-block';
+            document.getElementById('game-frame').src = url;
+        }
+        function home() {
+            document.getElementById('menu').style.display = 'grid';
+            document.getElementById('game-frame').style.display = 'none';
+            document.getElementById('game-frame').src = '';
+        }
+    </script>
+</body>
+</html>
+index.html
